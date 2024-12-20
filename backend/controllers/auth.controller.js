@@ -53,7 +53,9 @@ export const login = async (req,res) => {
         const {username,password}=req.body;  //getting inputs from user
         const user=await User.findOne({username}); //checking if this user exist or not
         const isPasswordCorrect=await bcrypt.compare(password,user?.password || ""); //checking if the entered password is correct or not
-        
+        if (!user || !isPasswordCorrect) {
+			return res.status(400).json({ error: "Invalid username or password" });
+		}
         generateTokenAndSetCookie(user._id,res);
         res.status(200).json({
             _id:user.id,
