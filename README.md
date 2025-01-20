@@ -1,4 +1,4 @@
-# Fullstack Real Time Chat App | MongoDB,React,Node.js,JWT,Socket.io
+# Fullstack Real Time Chat App 
 ![Screenshot 2024-12-20 162326](https://github.com/user-attachments/assets/ef1fc954-fe88-4200-9098-7bdcad14ecb2)
 ### Features of this app
 -  Frontend & Backend: HTML + TailwindCSS + daisyUI
